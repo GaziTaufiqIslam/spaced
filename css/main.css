@@ -1,0 +1,294 @@
+/*---------Global--------*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #010001;
+}
+h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 0;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+}
+
+.loader{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: #3626A7;
+    z-index: 999;
+}
+.loader p{
+    position: absolute;
+    top: calc(50% - 0.67rem);
+    left: calc(50% - 3rem);
+}
+.container{
+    max-width: 1200px;
+    width:90%;
+    margin: 0 auto;
+}
+
+/*---------Nav--------*/
+nav{
+    height: 100px;
+    line-height: 110px;
+    background: transparent;
+    box-shadow: none;
+    position: fixed;
+    z-index: 99;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    color: #ffffff;
+}
+.bg-black{
+    height: 64px;
+    line-height: 64px;
+    background: black;
+}
+.brand-logo{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+nav li{
+    margin-left: 5rem;
+}
+nav li a{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+nav li a:hover{
+    background: transparent;
+    color: #3626A7;
+}
+nav .current a{
+    color: #3626A7;
+}
+
+/*---------Hero----------*/
+#home{
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden;
+}
+#home .hero{
+    position: absolute;
+    height: 65vh;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+    opacity: 0.6;
+    transform: rotate(10deg);
+}
+#home .container{
+    margin-top: 15vh;
+    position: relative;
+    height: calc(85vh - 100px);
+}
+#home h1{
+    color: white;
+    font-weight: 900;
+}
+#home p{
+    font-weight: 300;
+}
+#home a{
+    display: inline-block;
+    margin-top: 1.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #3626A7;
+    border: 2px solid #3626A7;
+    padding: 1rem 5rem;
+    border-radius: 3px;
+    transition: all 200ms ease-in-out;
+}
+#home a:hover{
+    background: #3626A7;
+    color: white;
+    box-shadow: 0 2px 5px black;
+}
+.social{
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+}
+.social .icons-wrapper{
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #3626A7;
+    margin-bottom: 1.5rem;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 150ms ease-in-out;
+}
+.social .icons-wrapper:hover{
+    background: white;
+    cursor: pointer;
+}
+.social .icons-wrapper img{
+    height: 2.5rem;
+    padding: 0.65rem;
+}
+
+/*--------destination--------*/
+#dest{
+    color: blue;
+    position: relative;
+}
+#dest .arrow{
+    position: absolute;
+    bottom: 30vh;
+    z-index: 10;
+    background: white;
+}
+#dest .arrow i{
+    padding: 1.25rem;
+    color: black;
+    background: white;
+}
+#dest .arrow i:hover{
+    background: #3626A7;
+    cursor: pointer;
+    color: white;
+}
+.carousel1{
+    height: 70vh;
+}
+.carousel1 .carousel-item{
+    height: 100%;
+    width: 100%;
+}
+.carousel1 .carousel-item img{
+    height: inherit;
+    width: auto;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+#dest .row{
+    height: 30vh;
+    margin: 0;
+}
+.row .col{
+    padding: 0;
+}
+.carousel2 .carousel-item, .carousel3 .carousel-item{
+    background: #3626A7;
+    width: 100%;
+    padding: 1.5rem 0 0 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel3 .carousel-item h2,.carousel3 .carousel-item p{
+    display: inline;
+    vertical-align: top;
+    padding-right: 1rem;
+    text-shadow: 0px 3px 15px black;
+}
+.carousel3 a{
+    display: inline-block;
+    margin-top: 1.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #3626A7;
+    background: white;
+    padding: 1rem 5rem;
+    border-radius: 3px;
+    transition: all 200ms ease-in-out;
+}
+.carousel a i{
+    vertical-align: middle;
+}
+.carousel3 a:hover{
+    background: #3626A7;
+    color: white;
+}
+.carousel-item h2{
+    padding-bottom: 1.5rem;
+}
+.carousel3 .carousel-item:nth-child(1){
+    background-image: url(../img/mars.gif);
+    background-position: 50% 20%;
+}
+.carousel3 .carousel-item:nth-child(2){
+    background-image: url(../img/moon-surface.jpg);
+    background-position: 60% 60%;
+}
+.carousel3 .carousel-item:nth-child(3){
+    background-image: url(../img/europa-surface.jpeg);
+    background-position: 50% 80%;
+}
+
+#exp{
+    padding: 20vh 0;
+    background: url(../img/nh.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 10px black;
+}
+#ship h2{
+    padding-top: 5rem;
+}
+#ship .container p{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+#ship .row{
+    padding: 20vh 0;
+}
+#ship img{
+    max-height: 80vh;
+}
+
+#about{
+    padding: 8rem 0 1rem 0;
+}
+#about .spaced{
+    padding-bottom: 10rem;
+    text-align: center;
+}
+#about .team .row{
+    padding: 5rem 0;
+}
+#about .team img{
+    max-width: 400px;
+    width: 60vw;
+    border-radius: 100%;
+    filter: grayscale(90%);
+}
+
+@media screen and (min-width: 800px){
+    .carousel2 .carousel-item{
+        padding-left: 10%;
+    }
+}
